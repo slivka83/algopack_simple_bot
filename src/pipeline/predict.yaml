@@ -1,12 +1,4 @@
 steps:
   - name: pypyr.steps.cmd
     in:
-      cmd: python src\data\get_one_day.py
-
-  - name: pypyr.steps.cmd
-    in:
-      cmd: python src\features\create_features.py
-
-  - name: pypyr.steps.cmd
-    in:
-      cmd: python src\models\train_model.py
+      cmd: python src\models\predict_model.py

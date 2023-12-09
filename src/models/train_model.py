@@ -1,7 +1,6 @@
 import lightgbm as lgb
 import pandas as pd
 from datetime import datetime
-from sklearn.metrics import precision_score
 from sklearn.model_selection import GridSearchCV
 from sklearn.model_selection import TimeSeriesSplit
 from sklearn.metrics import classification_report
@@ -28,7 +27,6 @@ X_test, y_test = test[f_cols], test['target']
 
 print(X_train.shape, X_test.shape)
 print(y_train.mean() * 100, y_test.mean() * 100)
-
 
 
 params = {
