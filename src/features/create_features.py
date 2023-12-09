@@ -90,4 +90,4 @@ df = df.dropna(subset=['month_mean','ytd_mean'])
 
 # Сохраняем датасет
 today = datetime.today().strftime('%Y-%m-%d')
-df.to_pickle(f"data/processed/{today.replace('-','')}_{TICKER}.pkl")
+df.to_pickle(f"data/processed/{today.replace('-','')}_{TICKER}_train.pkl")

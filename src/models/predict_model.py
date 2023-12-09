@@ -7,7 +7,6 @@ from datetime import datetime
 TICKER = 'YNDX'
 
 today = datetime.today().strftime('%Y-%m-%d')
-today = '2023-12-06'
 
 # Загружаем модель
 model = lgb.Booster(model_file=f'models/{today.replace("-","")}_model.lgb')
@@ -40,14 +39,18 @@ def f_stat_ytd_month(df):
     df = df.merge(ytd_month, how='cross')
     return df
 
-
+# Формируем фичи
 df = (df
     .pipe(f_ratio)
     .pipe(f_stat_hour)
     .pipe(f_stat_ytd_month)
 )
 
+# Выделяем последнюю строку
 last_row = df[model.feature_name()][-1:]
+last_row.to_pickle(f"data/processed/{today.replace('-','')}_{TICKER}_predict.pkl")
+
+# Выполняем предсказание
 pred = model.predict(last_row).argmax()
 
 print(TICKER, df['tradetime'].max(), pred)

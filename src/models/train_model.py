@@ -12,7 +12,7 @@ warnings.filterwarnings('ignore')
 TICKER = 'YNDX'
 
 today = datetime.today().strftime('%Y-%m-%d')
-df = pd.read_pickle(f"data/processed/{today.replace('-','')}_{TICKER}.pkl")
+df = pd.read_pickle(f"data/processed/{today.replace('-','')}_{TICKER}_train.pkl")
 df = df.fillna(0)
 
 drop_cols = ['ticker','secid','ts','tradedate','tradetime','systime','peak','trough','target']
