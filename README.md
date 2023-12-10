@@ -73,7 +73,7 @@
 │   ├── models         <- Обучение модели и выполнение предсказания
 │   │   ├── predict_model.py
 │   │   └── train_model.py
-│   └── pipeline         <- Запуск оркестратора
+│   └── pipeline        <- Запуск оркестратора
 │       ├── predict.yaml
 │       └── train.yaml
 └── requirements.txt   <- Необходимы библиотеки
