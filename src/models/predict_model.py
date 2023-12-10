@@ -53,4 +53,13 @@ last_row.to_pickle(f"data/processed/{today.replace('-','')}_{TICKER}_predict.pkl
 # Выполняем предсказание
 pred = model.predict(last_row).argmax()
 
-print(TICKER, df['tradetime'].max(), pred)
+# Отправляем запрос брокеру 
+def send_to_broker(pred):
+    if pred == 0:
+        print(TICKER, df['tradetime'].max(), '- Ничего не делаем')
+    elif pred == 1:
+        print(TICKER, df['tradetime'].max(), '- Пик (продаем)')
+    elif pred == 2:
+        print(TICKER, df['tradetime'].max(), '- Впадина (покупаем)')
+
+send_to_broker(pred)

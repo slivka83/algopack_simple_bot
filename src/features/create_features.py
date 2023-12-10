@@ -91,3 +91,17 @@ df = df.dropna(subset=['month_mean','ytd_mean'])
 # Сохраняем датасет
 today = datetime.today().strftime('%Y-%m-%d')
 df.to_pickle(f"data/processed/{today.replace('-','')}_{TICKER}_train.pkl")
+
+
+# Подготовим статистики за прошлоый день/месяц для предсказания 
+agg_temp = df.groupby('tradedate')['pr_mean'].agg(['min','max','mean','std'])
+agg_temp.columns = [f'ytd_{col}' for col in agg_temp.columns]
+agg_temp = agg_temp[-1:]
+agg_temp = agg_temp.reset_index(drop=True)
+
+month_temp = df[:3120][['pr_mean']].agg(['min','max','mean','std']).T
+month_temp.columns = [f'month_{col}' for col in month_temp.columns]
+month_temp = month_temp.reset_index(drop=True)
+
+ytd_month = pd.concat([agg_temp,month_temp], axis=1)
+ytd_month.to_pickle(f'data/interim/{today.replace("-","")}_part.pkl')
