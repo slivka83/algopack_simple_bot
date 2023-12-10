@@ -62,6 +62,7 @@
 ├── docs               <- Документация
 ├── models             <- Обученные модели
 ├── notebooks          <- Ноутбуки
+├── pipeline           <- Запуск оркестратора
 ├── references         <- Полезные ссылки
 ├── reports            <- Отчеты
 ├── src                <- Исходный код
@@ -70,11 +71,8 @@
 │   │   └── make_dataset.py
 │   ├── features       <- Формирование фичей и таргета 
 │   │   └── build_features.py
-│   ├── models         <- Обучение модели и выполнение предсказания
-│   │   ├── predict_model.py
-│   │   └── train_model.py
-│   └── pipeline        <- Запуск оркестратора
-│       ├── predict.yaml
-│       └── train.yaml
+│   └── models         <- Обучение модели и выполнение предсказания
+│       ├── predict_model.py
+│       └── train_model.py
 └── requirements.txt   <- Необходимы библиотеки
 ```
