@@ -52,36 +52,26 @@
 - [Model](https://github.com/slivka83/algopack_simple_bot/blob/main/notebooks/Model.ipynb)
 - [Bot](https://github.com/slivka83/algopack_simple_bot/blob/main/notebooks/Bot.ipynb)
 
-# Структура каталога
+## Структура каталога
 
 ```
 ├── data
 │   ├── raw            <- Сырые данные
 │   ├── interim        <- Промежуточные данные
 │   └── processed      <- Датасет для обучения.
-│
 ├── docs               <- Документация
-│
 ├── models             <- Обученные модели
-│
 ├── notebooks          <- Ноутбуки
-│
 ├── references         <- Полезные ссылки
-│
 ├── reports            <- Отчеты
-│
 ├── src                <- Исходный код
 │   ├── __init__.py    <- Python module
-│   │
 │   ├── data           <- Загрузка сырых данных 
 │   │   └── make_dataset.py
-│   │
 │   ├── features       <- Формирование фичей и таргета 
 │   │   └── build_features.py
-│   │
 │   └── models         <- Обучение модели и выполнение предсказания
 │       ├── predict_model.py
 │       └── train_model.py
-│
 └── requirements.txt   <- Необходимы библиотеки
 ```
