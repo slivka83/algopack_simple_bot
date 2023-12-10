@@ -58,7 +58,7 @@
 ├── data
 │   ├── raw            <- Сырые данные
 │   ├── interim        <- Промежуточные данные
-│   └── processed      <- Датасет для обучения.
+│   └── processed      <- Датасет для обучения
 ├── docs               <- Документация
 ├── models             <- Обученные модели
 ├── notebooks          <- Ноутбуки
@@ -70,8 +70,11 @@
 │   │   └── make_dataset.py
 │   ├── features       <- Формирование фичей и таргета 
 │   │   └── build_features.py
-│   └── models         <- Обучение модели и выполнение предсказания
-│       ├── predict_model.py
-│       └── train_model.py
+│   ├── models         <- Обучение модели и выполнение предсказания
+│   │   ├── predict_model.py
+│   │   └── train_model.py
+│   └── pipeline         <- Запуск оркестратора
+│       ├── predict.yaml
+│       └── train.yaml
 └── requirements.txt   <- Необходимы библиотеки
 ```
