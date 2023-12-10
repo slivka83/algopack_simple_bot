@@ -20,29 +20,33 @@
 Запуск с 11 до 19 каждые 5 минут.
 
 
-## Архитектура решения
-Технически решение состоит из двух частей:
+## Решение
+Технически архитектура решение состоит из двух контуров:
+- Обучение - запускается ночью и выполняет две задачи: готовит датасет и обучает ML-модель
+- Предсказание - запускается каждыйе 5 минут и выполняет предсказание (покупать, продавать, ничего не делать).
 <p align="center" width="100%">
 <img src="https://github.com/slivka83/algopack_simple_bot/blob/main/docs/img/pipeline.png?raw=tru" alt="Архитектура решения" width="500"/>
 </p>
 
-Датасет:
+Для обучения подготовили датасет, который состоит из фичей AlgoPack и лагов, созданных из фичей временного ряда.
 <p align="center" width="100%">
 <img src="https://github.com/slivka83/algopack_simple_bot/blob/main/docs/img/dataset.png?raw=true" alt="Датасет" align="center" width="500"/>
 </p>
 
-Таргет:
+Метки для обучения получили путем детекции пиков и впадин на временном ряду (цены акции):
 <p align="center" width="100%">
 <img src="https://github.com/slivka83/algopack_simple_bot/blob/main/docs/img/target.png?raw=true" alt="Таргет"/>
 </p>
 
-
 ## Статьи
-Статьи:
-- _
-- _
+Весь ход разработки решения описали в цикле статей:
+- Введение
+- EDA
+- Модель
+- Бот
 
 ## Ноутбуки
-В ноутбуках вы найдете наглядный пример воспроизведения:
-- _
-- _
+Также офрмили ряд ноутбуков, которые в ручном режиме воспроизводят функционал бота:
+- [EDA](https://github.com/slivka83/algopack_simple_bot/blob/main/notebooks/EDA.ipynb)
+- [Model](https://github.com/slivka83/algopack_simple_bot/blob/main/notebooks/Model.ipynb)
+- [Bot](https://github.com/slivka83/algopack_simple_bot/blob/main/notebooks/Bot.ipynb)
