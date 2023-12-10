@@ -22,14 +22,19 @@
 
 ## Архитектура решения
 Технически решение состоит из двух частей:
-<img src="https://github.com/slivka83/algopack_simple_bot/blob/main/docs/img/pipeline.png?raw=tru" alt="Архитектура решения" align="center" width="500"/>
+<p align="center" width="100%">
+<img src="https://github.com/slivka83/algopack_simple_bot/blob/main/docs/img/pipeline.png?raw=tru" alt="Архитектура решения" width="500"/>
+</p>
 
 Датасет:
+<p align="center" width="100%">
 <img src="https://github.com/slivka83/algopack_simple_bot/blob/main/docs/img/dataset.png?raw=true" alt="Датасет" align="center" width="500"/>
+</p>
 
 Таргет:
+<p align="center" width="100%">
 <img src="https://github.com/slivka83/algopack_simple_bot/blob/main/docs/img/target.png?raw=true" alt="Таргет"/>
-
+</p>
 
 
 ## Статьи
